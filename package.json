@@ -1,0 +1,15 @@
+{
+  "name": "mentorship-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "企业导师制辅导系统：导师目录、匹配申请、时段安排、辅导纪要、换导师与结项审核（零依赖 Node.js）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "test": "node --no-warnings --test test/*.test.js",
+    "seed": "node --no-warnings -e \"const{openDb,DB_PATH}=require('./src/db');const{seedIfEmpty}=require('./src/seed');const db=openDb(DB_PATH);seedIfEmpty(db);console.log('seeded:',DB_PATH)\""
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
